@@ -27,39 +27,27 @@ if (!isset($_SESSION['usuario'])) {
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#productos">Productos</a>
         <a href="#comparador">Comparador</a>
+        <a href="login.php">Cerrar sesión</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1>Invertí con claridad y propósito</h1>
           <p>Descubrí opciones de inversión alineadas a tu perfil de riesgo: <strong>acciones</strong>, <strong>bonos</strong>, <strong>ETFs</strong> y <strong>fondos</strong>. Herramientas simples, información transparente.</p>
           <div class="cta-row">
-            <a class="btn" href="#productos">Explorar productos</a>
-            <a class="btn btn-ghost" href="#comparador">Comparar riesgos</a>
+            <a href="invertir.php" class="btn">Invertir</a>
+            <a href="simular.php" class="btn ">Simulación de días</a>
+            <a href="billetera.php" class="btn ">cartera</a>
           </div>
         </div>
-        <div class="hero-card" role="img" aria-label="Tarjeta con ejemplo de cartera diversificada">
-          <div class="kpi">
-            <span class="kpi-label">Cartera demo</span>
-            <span class="kpi-value">+12.4% YTD</span>
-          </div>
-          <div class="bars" aria-hidden="true">
-            <div style="--v:65%" title="ETFs 65%">ETFs</div>
-            <div style="--v:20%" title="Bonos 20%">Bonos</div>
-            <div style="--v:10%" title="Acciones 10%">Acciones</div>
-            <div style="--v:5%"  title="Efectivo 5%">Efectivo</div>
-          </div>
-          <p class="note">Ejemplo educativo. No constituye recomendación.</p>
-        </div>
+        
       </div>
     </section>
 
-    <!-- Cómo funciona -->
     <section id="como-funciona" class="section container">
       <header class="section-header">
         <h2>¿Cómo funciona?</h2>
@@ -89,7 +77,6 @@ if (!isset($_SESSION['usuario'])) {
       </div>
     </section>
 
-    <!-- Productos -->
     <section id="productos" class="section section-alt">
       <div class="container">
         <header class="section-header">
@@ -137,7 +124,6 @@ if (!isset($_SESSION['usuario'])) {
       </div>
     </section>
 
-    <!-- Comparador -->
     <section id="comparador" class="section container">
       <header class="section-header">
         <h2>Comparador rápido</h2>
@@ -193,14 +179,12 @@ if (!isset($_SESSION['usuario'])) {
         </table>
       </div>
 
-      <p class="legend">La información es educativa y puede no reflejar tu situación particular.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> ModuMoney</p>
-     
     </div>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
